@@ -1,0 +1,27 @@
+{
+  "name": "blabot-api",
+  "version": "0.0.1",
+  "description": "Blabot API site",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blabot/blabot-api.git"
+  },
+  "keywords": [
+    "blabot",
+    "api"
+  ],
+  "author": "Tomas Kuba <tomas.kuba.cz@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blabot/blabot-api/issues"
+  },
+  "homepage": "https://github.com/blabot/blabot-api#readme",
+  "dependencies": {
+    "blabot-core": "^0.6.1",
+    "express": "^4.12.4"
+  }
+}
