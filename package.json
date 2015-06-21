@@ -22,6 +22,7 @@
   "homepage": "https://github.com/blabot/blabot-api#readme",
   "dependencies": {
     "blabot-core": "^0.6.1",
-    "express": "^4.12.4"
+    "express": "^4.12.4",
+    "rsvp": "^3.0.18"
   }
 }
