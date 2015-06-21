@@ -18,5 +18,5 @@ app.use(function(err, req, res, next) {
 var port = process.env.PORT || 3000;        // set our port
 
 app.listen(port, function () {
-  console.log( "Listening on http://" + serverIP + ":" + port )
+  console.log( "Listening on: "  + port )
 });
