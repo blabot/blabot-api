@@ -15,11 +15,9 @@ app.use(function(err, req, res, next) {
   res.status(500).json({'message': err.message});
 });
 
+var serverPort = process.env.OPENSHIFT_NODEJS_PORT || 3000;
+var serverIP = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
 
-//var server = app.listen(3000, function () {
-//  var host = server.address().address;
-//  var port = server.address().port;
-//  console.log('Example app listening at http://%s:%s', host, port);
-//});
-app.listen(port);
-console.log('Magic happens on port ' + port);
+app.listen(serverPort, serverIP, function () {
+  console.log( "Listening on http://" + serverIP + ":" + port )
+});
