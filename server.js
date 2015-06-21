@@ -9,7 +9,7 @@ app.get('/', function (req, res) {
 app.use('/v2', v2);
 
 app.use(function (err, req, res, next) {
-  console.log(err);
+  console.error(err);
   res.status(500).json({'message': err.message});
 });
 
