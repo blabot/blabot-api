@@ -3,7 +3,7 @@ var app = express();
 var v2 = require('./src/router-v2');
 
 app.get('/', function (req, res) {
-  res.send('Welcome to Blabot API…');
+  res.json(['Welcome to Blabot API…']);
 });
 
 app.use('/v2', v2);
