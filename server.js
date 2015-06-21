@@ -13,8 +13,13 @@ app.use(function (err, req, res, next) {
   res.status(500).json({'message': err.message});
 });
 
-var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 3000;
-var ipAddress = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1';
+var port = process.env.PORT ||
+  process.env.OPENSHIFT_NODEJS_PORT ||
+  process.env.OPENSHIFT_INTERNAL_PORT ||
+  3000;
+var ipAddress = process.env.OPENSHIFT_NODEJS_IP ||
+  process.env.OPENSHIFT_INTERNAL_IP ||
+  'localhost';
 
 app.listen(port, ipAddress, function () {
   console.log("Listening on: " + port)
